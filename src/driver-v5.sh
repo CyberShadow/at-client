@@ -232,7 +232,7 @@ function runtests
                 ;;
         esac
         if [ $step_rc -gt 1 ]; then
-            echo "timed out after $TESTER_TIMEOUT seconds, step failed" >> $rundir/$logname
+            echo "$reponame step ${steps[0]} timed out ($step_rc) after $TESTER_TIMEOUT seconds, step failed" >> $rundir/$logname
             step_rc=1
         fi
         steps=(${steps[@]:2})
